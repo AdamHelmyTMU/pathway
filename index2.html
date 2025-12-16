@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathway Surgery | Private Orthopedic Care Canada</title>
+    <meta name="description" content="Private orthopedic care available across Canada. Surgery in 2-3 weeks with top Canadian Surgeons.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        :root {
+            /* Brand Colors */
+            --navy: #203365;
+            --navy-light: #2a407a;
+            --blue: #26a9e1;
+            --blue-dim: #ebf6fb;
+            
+            /* Neutrals */
+            --bg-body: #FFFFFF;
+            --bg-offset: #F8FAFC;
+            --text-main: #1F2937;
+            --text-muted: #64748B;
+            --white: #ffffff;
+            --border-light: #E2E8F0;
+            
+            /* Dimensions */
+            --max-width: 1240px;
+            --header-height: 100px;
+            --radius-xl: 24px;
+            --radius-lg: 16px;
+            --radius-md: 8px;
+            --radius-pill: 100px;
+        }
+
+        /* --- Global Reset & Base --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--navy);
+            font-weight: 700; /* Bold style as requested */
+            line-height: 1.2;
+        }
+
+        p { color: var(--text-muted); font-size: 1.05rem; font-weight: 400; }
+
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        
+        /* --- Utilities --- */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding { padding: 100px 0; }
+        .bg-offset { background-color: var(--bg-offset); }
+        .text-center { text-align: center; }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--blue-dim);
+            color: var(--navy);
+            padding: 8px 20px;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary {
+            background-color: var(--navy);
+            color: var(--white);
+            box-shadow: 0 10px 20px -5px rgba(32, 51, 101, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--blue);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(38, 169, 225, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border-light);
+            color: var(--navy);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--navy);
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* --- Navigation --- */
+        header {
+            height: var(--header-height);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-img {
+            height: 65px; /* Adjust based on your logo file's aspect ratio */
+            width: auto;
+        }
+
+        .nav-links { display: flex; gap: 40px; }
+        .nav-link { 
+            font-weight: 600; 
+            color: var(--navy); 
+            font-size: 0.95rem;
+        }
+        .nav-link:hover { color: var(--blue); }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            padding-top: 60px;
+            padding-bottom: 120px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 540px;
+            line-height: 1.7;
+        }
+
+        .trust-metrics {
+            display: flex;
+            gap: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .metric strong { display: block; font-size: 1.5rem; color: var(--navy); font-weight: 700; }
+        .metric span { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; font-weight: 600; }
+
+        /* --- Modern Form Card --- */
+        .consult-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 40px 80px -20px rgba(32, 51, 101, 0.15);
+            border: 1px solid rgba(255,255,255,0.5);
+            position: relative;
+        }
+        
+        .consult-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 8px;
+            background: linear-gradient(90deg, var(--navy) 0%, var(--blue) 100%);
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 18px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            background: #FAFAFA;
+            transition: 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            background: var(--white);
+            border-color: var(--blue);
+            box-shadow: 0 0 0 4px var(--blue-dim);
+        }
+
+        /* --- Infinite Scroll Reviews (New Section) --- */
+        .reviews-section {
+            background: var(--white);
+            padding: 80px 0;
+            overflow: hidden;
+            border-bottom: 1px solid var(--bg-offset);
+        }
+
+        .slider {
+            height: auto;
+            margin: auto;
+            position: relative;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(400px * 12); /* Width of slide * number of slides */
+            animation: scroll 60s linear infinite;
+        }
+
+        /* Hover pauses scroll */
+        .slide-track:hover { animation-play-state: paused; }
+
+        .slide {
+            height: auto;
+            width: 400px; /* Card Width */
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .review-card {
+            background: #FAFAFA;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            height: 100%;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .review-card:hover {
+            border-color: var(--blue);
+            background: white;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+        }
+
+        .stars { color: #FFB800; display: flex; gap: 4px; margin-bottom: 15px; }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-400px * 6)); } /* Move by half total width */
+        }
+
+
+        /* --- Featured Procedures --- */
+        .proc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .proc-card {
+            background: var(--navy);
+            color: white;
+            padding: 50px;
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: start;
+            gap: 24px;
+            box-shadow: 0 25px 50px -12px rgba(32, 51, 101, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .proc-card.light {
+            background: var(--white);
+            color: var(--navy);
+            border: 1px solid var(--border-light);
+        }
+
+        .proc-card:hover { transform: translateY(-5px); }
+
+        .proc-icon-box {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .proc-card.light .proc-icon-box { background: var(--blue-dim); color: var(--blue); }
+        .proc-card.light p { color: var(--text-muted); }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .service-item {
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            border: 1px solid transparent;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            border-color: var(--blue-dim);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        .s-icon { 
+            font-size: 40px; 
+            color: var(--blue); 
+            margin-bottom: 24px; 
+            display: inline-block;
+        }
+
+        .link-text {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 20px;
+        }
+        
+        .service-item:hover .link-text { color: var(--blue); }
+
+        /* --- Surgeons --- */
+        .surgeons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .surgeon-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: 0.3s;
+            border: 1px solid var(--border-light);
+        }
+        
+        .surgeon-card:hover { box-shadow: 0 20px 40px rgba(32, 51, 101, 0.1); }
+
+        .surgeon-img-wrapper {
+            height: 380px; 
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+        
+        .surgeon-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+        
+        .surgeon-card:hover img { transform: scale(1.03); }
+
+        .surgeon-details { padding: 30px; text-align: center; }
+        .spec-label { 
+            color: var(--blue); 
+            font-weight: 700; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.7);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        footer h4 { color: white; margin-bottom: 24px; font-weight: 700; font-size: 1.1rem;}
+        footer ul li { margin-bottom: 12px; font-size: 0.95rem; }
+        footer a:hover { color: var(--blue); }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 900px) {
+            h1 { font-size: 2.5rem; }
+            .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+            .consult-card { padding: 24px; }
+            .proc-grid { grid-template-columns: 1fr; margin-top: 0; }
+            .services-grid, .surgeons-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .slide { width: 300px; } /* Smaller cards on mobile */
+            .slide-track { width: calc(300px * 12); }
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-300px * 6)); }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <img src="High Resolution 5.png" alt="Pathway Surgery Logo" class="logo-img">
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#specialties" class="nav-link">Procedures</a></li>
+                    <li><a href="#surgeons" class="nav-link">Surgeons</a></li>
+                    <li><a href="#process" class="nav-link">Patient Journey</a></li>
+                    <li><a href="#reviews" class="nav-link">Success Stories</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contact" class="btn btn-primary" style="padding: 12px 28px; font-size: 0.9rem;">Patient Portal</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                
+                <div class="hero-content">
+                    <div class="badge">
+                        <img src="Pathway - Edited.png" style="width: 16px; height: 16px;">
+                        Private Care in Canada
+                    </div>
+                    <h1>Your Pathway to<br> <span style="color: var(--blue);">Rapid Recovery.</span></h1>
+                    <p>Experience world-class orthopedic surgery in as little as 2-3 weeks. We provide rapid access to Canada's top specialists in a premium, private setting.</p>
+                    
+                    <div class="trust-metrics">
+                        <div class="metric">
+                            <strong>2-3 Weeks</strong>
+                            <span>Time to Surgery</span>
+                        </div>
+                        <div class="metric">
+                            <strong>5.0</strong>
+                            <span>Patient Rating</span>
+                        </div>
+                        <div class="metric">
+                            <strong>Canadian</strong>
+                            <span>Board Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consult-card" id="contact">
+                    <div style="margin-bottom: 24px;">
+                        <h3 style="font-size: 1.5rem;">Request Surgery Details</h3>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Our care coordinator will contact you within 24 hours to discuss availability.</p>
+                    </div>
+                    
+                    <form class="form-grid">
+                        <div class="input-group">
+                            <input type="text" class="input-field" placeholder="Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" class="input-field" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" class="input-field" placeholder="Phone Number" required>
+                        </div>
+                        <div class="input-group">
+                            <select class="input-field" style="color: #555;">
+                                <option value="" disabled selected>Procedure Needed</option>
+                                <option value="knee">Knee Replacement</option>
+                                <option value="hip">Hip Replacement</option>
+                                <option value="shoulder">Shoulder Surgery</option>
+                                <option value="spine">Spine Surgery</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Check Availability</button>
+                    </form>
+                    
+                    <div style="margin-top: 20px; text-align: center; font-size: 0.8rem; color: #9CA3AF; display: flex; justify-content: center; align-items: center; gap: 6px;">
+                        <i class="ph-fill ph-lock-key"></i> Secure & Private Submission
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="proc-grid">
+                <div class="proc-card">
+                    <div class="proc-icon-box"><i class="ph ph-robot"></i></div>
+                    <div>
+                        <h3>Robotic Knee Replacement</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 16px;">State-of-the-art ROSA® technology for higher precision and significantly reduced recovery timelines.</p>
+                        <a href="#" style="color: var(--blue); font-weight: 700; font-size: 0.9rem;">VIEW PROCEDURE &rarr;</a>
+                    </div>
+                </div>
+                <div class="proc-card light">
+                    <div class="proc-icon-box"><i class="ph ph-person-walking"></i></div>
+                    <div>
+                        <h3>Anterior Hip Replacement</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 16px;">A minimally invasive, muscle-sparing approach that preserves soft tissue to accelerate your return to activity.</p>
+                        <a href="#" style="color: var(--navy); font-weight: 700; font-size: 0.9rem;">VIEW PROCEDURE &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section" id="reviews">
+            <div class="text-center mb-12" style="margin-bottom: 50px; padding: 0 20px;">
+                <h2 style="font-size: 2.25rem; margin-bottom: 10px;">What Patients Are Saying</h2>
+                <a href="https://maps.google.com" target="_blank" style="color: var(--blue); font-weight: 600; font-size: 0.95rem;">
+                    Read all verified 5-Star Reviews on Google
+                </a>
+            </div>
+
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"The speed from consultation to surgery was incredible. Only 3 weeks compared to the 18 months I was quoted elsewhere. The facility is pristine."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Robert M.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Dr. Zywiel was fantastic. He explained everything clearly. Being able to access private care right here in Canada was a game changer for my quality of life."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Sarah L.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Professional from start to finish. The team at Pathway made me feel like a priority, not just a number on a list. My hip feels brand new."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- David K.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Worth every penny to get my life back. The nursing staff were attentive and kind. I was walking unassisted within days."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Patricia W.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"I was suffering with knee pain for years. Pathway Surgery got me in within 2 weeks. The robotic procedure recovery was surprisingly fast."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- James H.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Transparent pricing and excellent communication. No hidden fees, just great medical care from top Canadian surgeons."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Greg T.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"The speed from consultation to surgery was incredible. Only 3 weeks compared to the 18 months I was quoted elsewhere. The facility is pristine."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Robert M.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Dr. Zywiel was fantastic. He explained everything clearly. Being able to access private care right here in Canada was a game changer for my quality of life."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Sarah L.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Professional from start to finish. The team at Pathway made me feel like a priority, not just a number on a list. My hip feels brand new."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- David K.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Worth every penny to get my life back. The nursing staff were attentive and kind. I was walking unassisted within days."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Patricia W.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"I was suffering with knee pain for years. Pathway Surgery got me in within 2 weeks. The robotic procedure recovery was surprisingly fast."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- James H.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="review-card">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                            </div>
+                            <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 15px;">"Transparent pricing and excellent communication. No hidden fees, just great medical care from top Canadian surgeons."</p>
+                            <p style="font-weight: 700; font-size: 0.85rem; color: var(--navy);">- Greg T.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-offset" id="specialties">
+            <div class="container">
+                <div class="text-center" style="max-width: 760px; margin: 0 auto 60px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Comprehensive Surgical Care</h2>
+                    <p>We specialize in minimally invasive techniques designed to get you back to your active lifestyle sooner, with less pain and better outcomes.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="ph ph-person-simple-run s-icon"></i>
+                        <h3>Knee Arthroscopy</h3>
+                        <p>Minimally invasive treatment for meniscus tears, ACL reconstruction, and cartilage preservation.</p>
+                        <a href="#" class="link-text">Explore Knee <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="ph ph-bone s-icon"></i>
+                        <h3>Hip Preservation</h3>
+                        <p>Expert care for labral tears and hip impingement to preserve your natural joint mechanics.</p>
+                        <a href="#" class="link-text">Explore Hip <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="ph ph-armchair s-icon"></i>
+                        <h3>Shoulder & Elbow</h3>
+                        <p>Rotator cuff repairs, stabilization procedures, and total anatomic joint replacements.</p>
+                        <a href="#" class="link-text">Explore Shoulder <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="ph ph-footprints s-icon"></i>
+                        <h3>Foot & Ankle</h3>
+                        <p>Advanced correction for bunions, ankle fusions, and achilles tendon repair.</p>
+                        <a href="#" class="link-text">Explore Foot <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="ph ph-hand-palm s-icon"></i>
+                        <h3>Hand & Wrist</h3>
+                        <p>Specialized treatment for carpal tunnel, trigger finger, and complex fracture management.</p>
+                        <a href="#" class="link-text">Explore Hand <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-item">
+                        <i class="ph ph-activity s-icon"></i>
+                        <h3>Spine Surgery</h3>
+                        <p>Interventions for disc herniation, spinal stenosis, and chronic back pain relief.</p>
+                        <a href="#" class="link-text">Explore Spine <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 60px;">
+                    <a href="#" class="btn btn-outline">View Full List of Procedures</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-body" id="surgeons">
+            <div class="container">
+                <div class="text-center" style="max-width: 760px; margin: 0 auto;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Meet Your Specialists</h2>
+                    <p>Our surgeons are Canadian board-certified leaders in their respective fields, dedicated to patient-centric private care.</p>
+                </div>
+
+                <div class="surgeons-grid">
+                    <div class="surgeon-card">
+                        <div class="surgeon-img-wrapper">
+                            <img src="https://framerusercontent.com/images/Nj2yDBdLxmb0TKaOlqom0oXCl5g.png" alt="Dr. Thierry Pauyo">
+                        </div>
+                        <div class="surgeon-details">
+                            <span class="spec-label">Hip & Knee Specialist</span>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 10px;">Dr. Thierry Pauyo</h4>
+                            <p style="font-size: 0.9rem;">Harvard-trained expert in arthroscopic joint preservation and sports medicine.</p>
+                        </div>
+                    </div>
+
+                    <div class="surgeon-card">
+                        <div class="surgeon-img-wrapper">
+                            <img src="https://framerusercontent.com/images/Ps6qDewWSTg8gzQED90pyaPNzM.webp" alt="Dr. Michael Zywiel">
+                        </div>
+                        <div class="surgeon-details">
+                            <span class="spec-label">Joint Replacement</span>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 10px;">Dr. Michael Zywiel</h4>
+                            <p style="font-size: 0.9rem;">Leader in complex primary and revision hip & knee replacements.</p>
+                        </div>
+                    </div>
+
+                    <div class="surgeon-card">
+                        <div class="surgeon-img-wrapper">
+                            <img src="https://framerusercontent.com/images/VbYuKP5on12tu1MG9sXfksa0Is.png" alt="Dr. Jihad Abouali">
+                        </div>
+                        <div class="surgeon-details">
+                            <span class="spec-label">Sports Medicine</span>
+                            <h4 style="font-size: 1.5rem; margin-bottom: 10px;">Dr. Jihad Abouali</h4>
+                            <p style="font-size: 0.9rem;">Specializing in arthroscopic knee and shoulder reconstruction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 60px;">
+                    <a href="#" class="btn btn-primary">See All Surgeon Profiles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
+                        <img src="Pathway - Edited.png" alt="Pathway Cross" style="width: 30px; height: auto;">
+                        <span style="font-family: 'Poppins'; font-weight: 700; font-size: 1.5rem; color: white;">Pathway<span style="color: var(--blue);">Surgery</span></span>
+                    </a>
+                    <p style="font-size: 0.95rem; margin-bottom: 24px;">Providing rapid access to world-class orthopedic care in a premium, private setting. Experience the difference of a dedicated team.</p>
+                    <div style="display: flex; gap: 20px; font-size: 24px; color: white;">
+                        <i class="ph-fill ph-instagram-logo"></i>
+                        <i class="ph-fill ph-facebook-logo"></i>
+                        <i class="ph-fill ph-linkedin-logo"></i>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4>Procedures</h4>
+                    <ul>
+                        <li><a href="#">Robotic Knee</a></li>
+                        <li><a href="#">Anterior Hip</a></li>
+                        <li><a href="#">ACL Reconstruction</a></li>
+                        <li><a href="#">Spine Decompression</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Surgeons</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Concierge Contact</h4>
+                    <ul>
+                        <li style="display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-phone" style="color: var(--blue);"></i> +1 (647) 553-1297
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-envelope" style="color: var(--blue);"></i> info@pathwaysurgery.com
+                        </li>
+                        <li style="display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-map-pin" style="color: var(--blue);"></i> Mississauga, ON
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; font-size: 0.85rem; color: rgba(255,255,255,0.4);">
+                &copy; 2024 Pathway Surgery Specialists. All rights reserved. <br>
+                <span style="opacity: 0.6; margin-top: 5px; display: inline-block;">Designed for Excellence.</span>
+            </div>
+        </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathway Surgery - Orthopedic Care</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #002D5B; /* Dark Navy */
+            --accent-blue: #E0F2FE; /* Baby Blue Background */
+            --highlight-blue: #38BDF8; /* Bright Blue for buttons/accents */
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --white: #FFFFFF;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: #FAFAFA;
+            overflow-x: hidden;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #004080;
+            transform: translateY(-2px);
+        }
+
+        /* --- THE PATHWAY SECTION --- */
+        .pathway-section {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pathway-card {
+            position: relative;
+        }
+
+        .pathway-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .pathway-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .pathway-card:hover .pathway-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .step-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: var(--highlight-blue);
+            color: var(--white);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        .pathway-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .pathway-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- SERVICES SECTION (Updated Design) --- */
+        .services-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columns for the categories */
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive breakdown for services */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .service-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 3/5;
+            cursor: pointer;
+            group: 'service';
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 2rem 1rem 1rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* --- SURGEONS SECTION (Updated Layout) --- */
+        .surgeons-section {
+            padding: 5rem 0;
+            background-color: #F8FAFC;
+        }
+
+        .surgeons-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .surgeons-container { grid-template-columns: 1fr; }
+        }
+
+        .surgeons-info h2 {
+            color: var(--primary-blue);
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .surgeons-features {
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon {
+            color: var(--highlight-blue);
+            font-size: 1.25rem;
+            margin-top: 2px;
+        }
+
+        .feature-text h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-text p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Horizontal Scrolling for Surgeon Cards */
+        .surgeons-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 1rem 0.5rem 2rem 0.5rem;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .surgeons-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .surgeon-card {
+            min-width: 280px;
+            background: var(--accent-blue); /* Baby Blue Accent */
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid #BAE6FD;
+        }
+
+        .surgeon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .surgeon-image {
+            height: 320px;
+            background-color: #dbeafe;
+            position: relative;
+        }
+        
+        .surgeon-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .surgeon-details {
+            padding: 1.5rem;
+            background: var(--white);
+            border-top: 1px solid #E0F2FE;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            margin: 0 4px 4px 4px; /* Slight inset look */
+        }
+
+        .surgeon-name {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .surgeon-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- CONTINUOUS SCROLLING REVIEWS --- */
+        .reviews-section {
+            padding: 4rem 0;
+            background: var(--primary-blue);
+            color: white;
+            overflow: hidden;
+        }
+
+        .scroller {
+            max-width: 100%;
+        }
+
+        .scroller-inner {
+            padding-block: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .scroller[data-animated="true"] {
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+
+        .scroller[data-animated="true"] .scroller-inner {
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: scroll 40s linear infinite;
+        }
+
+        /* Don't pause on hover */
+        /* .scroller[data-animated="true"]:hover .scroller-inner { animation-play-state: paused; } removed per request */
+
+        @keyframes scroll {
+            to { transform: translate(calc(-50% - 0.75rem)); }
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            width: 350px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .review-stars {
+            color: #FBBF24; /* Gold */
+            margin-bottom: 0.5rem;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #E0E7FF;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* --- PODCAST SECTION --- */
+        .podcast-section {
+            padding: 5rem 0;
+            background: #FAFAFA;
+        }
+
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .podcast-card {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .podcast-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .podcast-thumb {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .podcast-content {
+            padding: 1.25rem;
+        }
+
+        .podcast-title {
+            color: var(--text-dark);
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .podcast-meta {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .play-icon {
+            color: #FF0000;
+        }
+        
+        /* Footer Disclaimer */
+        .footer-disclaimer {
+            background: #f1f5f9;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="pathway-section">
+        <div class="container">
+            <h2 class="section-title">The Pathway</h2>
+            <p class="section-subtitle">Your journey to surgery, simplified and supported every step of the way.</p>
+            
+            <div class="pathway-grid">
+                <div class="pathway-card">
+                    <span class="step-badge">Step 1</span>
+                    <div class="pathway-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" alt="Surgeon Consultation">
+                    </div>
+                    <h3>Consult with a Surgeon</h3>
+                    <p>Receive expert guidance and a personalized surgical plan designed for your specific needs.</p>
+                </div>
+
+                <div class="pathway-card">
+                    <span class="step-badge">Step 2</span>
+                    <div class="pathway-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" alt="Logistics Support">
+                    </div>
+                    <h3>We Handle the Logistics</h3>
+                    <p>From appointments to travel coordination, our team manages the details so you can focus on yourself.</p>
+                </div>
+
+                <div class="pathway-card">
+                    <span class="step-badge">Step 3</span>
+                    <div class="pathway-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop" alt="Recovery Support">
+                    </div>
+                    <h3>Recover with Support</h3>
+                    <p>Your recovery is guided through personalized follow-ups and ongoing check-ins to support your outcome.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container" style="text-align: center; margin-bottom: 2rem;">
+            <h2>Patient Experiences</h2>
+        </div>
+        
+        <div class="scroller" data-animated="true">
+            <div class="scroller-inner">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The entire process was seamless. From the first consultation to my post-op care, I felt supported and informed."</p>
+                    <p class="review-author">- Sarah M.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Dr. Abouali explained everything clearly. I appreciated the focus on my personal goals for recovery."</p>
+                    <p class="review-author">- James P.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Professional, kind, and efficient. The logistics team took a huge weight off my shoulders."</p>
+                    <p class="review-author">- Elena R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Great experience with the hip team. I felt like I was in expert hands the whole time."</p>
+                    <p class="review-author">- Robert T.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The podcast helped me understand my procedure so much better. Highly recommend listening!"</p>
+                    <p class="review-author">- Anita L.</p>
+                </div>
+                 <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Minimal wait times and excellent communication. Very happy with the care I received."</p>
+                    <p class="review-author">- Michael B.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Care That Moves With You</h2>
+            <p class="section-subtitle">From sports injuries to chronic pain management — personalized, expert treatment.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1590611936760-eeb9f5922d19?q=80&w=600&auto=format&fit=crop" alt="Knee">
+                    <div class="service-overlay">Knee</div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2fdd1e8c5dd0?q=80&w=600&auto=format&fit=crop" alt="Hip">
+                    <div class="service-overlay">Hip</div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?q=80&w=600&auto=format&fit=crop" alt="Shoulder & Elbow">
+                    <div class="service-overlay">Shoulder & Elbow</div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1588286840104-4d5b32152f20?q=80&w=600&auto=format&fit=crop" alt="Foot & Ankle">
+                    <div class="service-overlay">Foot & Ankle</div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1601055903647-87e16f818d0b?q=80&w=600&auto=format&fit=crop" alt="Hand & Wrist">
+                    <div class="service-overlay">Hand & Wrist</div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1616391182219-e080b4d1043a?q=80&w=600&auto=format&fit=crop" alt="Spine">
+                    <div class="service-overlay">Spine</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="surgeons-section">
+        <div class="container surgeons-container">
+            <div class="surgeons-info">
+                <h2>Guided By Top Orthopedic Surgeons</h2>
+                <p class="section-subtitle">Pathway Surgery partners with leading experts to deliver exceptional care through evidence-based plans.</p>
+                
+                <div class="surgeons-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Credible Specialists</h4>
+                            <p>Experienced surgeons specializing in orthopedics.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Healthcare Reimagined</h4>
+                            <p>A personalized, tailored and timely delivery of care to our clients.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Technology-Driven Care</h4>
+                            <p>Utilizing innovative technologies for effective and patient-centred care.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-primary">Meet Our Surgeons</a>
+            </div>
+
+            <div class="surgeons-scroll">
+                <div class="surgeon-card">
+                    <div class="surgeon-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop" alt="Dr. Jihad Abouali">
+                    </div>
+                    <div class="surgeon-details">
+                        <div class="surgeon-name">Dr. Jihad Abouali</div>
+                        <a href="#" class="surgeon-link">View Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="surgeon-card">
+                    <div class="surgeon-image">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=600&auto=format&fit=crop" alt="Dr. Sebastian Rodriguez">
+                    </div>
+                    <div class="surgeon-details">
+                        <div class="surgeon-name">Dr. Sebastian Rodriguez</div>
+                        <a href="#" class="surgeon-link">View Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="surgeon-card">
+                    <div class="surgeon-image">
+                        <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?q=80&w=600&auto=format&fit=crop" alt="Dr. Danny Arora">
+                    </div>
+                    <div class="surgeon-details">
+                        <div class="surgeon-name">Dr. Danny Arora</div>
+                        <a href="#" class="surgeon-link">View Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="podcast-section">
+        <div class="container">
+            <h2 class="section-title">Surgeon Podcasts</h2>
+            <p class="section-subtitle">Listen to in-depth discussions with our specialists about procedures, recovery, and patient care.</p>
+            
+            <div class="podcast-grid">
+                <a href="https://youtu.be/8K0ysDhz4J4" target="_blank" class="podcast-card">
+                    <img src="https://img.youtube.com/vi/8K0ysDhz4J4/maxresdefault.jpg" alt="ACL Reconstruction" class="podcast-thumb">
+                    <div class="podcast-content">
+                        <h3 class="podcast-title">ACL Reconstruction & Meniscal Repair with Dr. Abouali</h3>
+                        <div class="podcast-meta">
+                            <span class="play-icon"><i class="fab fa-youtube"></i></span> Watch on YouTube
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/A4PNlO1uAAc" target="_blank" class="podcast-card">
+                    <img src="https://img.youtube.com/vi/A4PNlO1uAAc/maxresdefault.jpg" alt="All Things Hip" class="podcast-thumb">
+                    <div class="podcast-content">
+                        <h3 class="podcast-title">All Things Hip with Dr. Rodriguez & Dr. Pauyo</h3>
+                        <div class="podcast-meta">
+                            <span class="play-icon"><i class="fab fa-youtube"></i></span> Watch on YouTube
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/OiP2dZaIcaA" target="_blank" class="podcast-card">
+                    <img src="https://img.youtube.com/vi/OiP2dZaIcaA/maxresdefault.jpg" alt="Knee Replacement FAQ" class="podcast-thumb">
+                    <div class="podcast-content">
+                        <h3 class="podcast-title">Knee Replacement - Answering Questions with Dr. Rodriguez</h3>
+                        <div class="podcast-meta">
+                            <span class="play-icon"><i class="fab fa-youtube"></i></span> Watch on YouTube
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/NRVokJbGm_s" target="_blank" class="podcast-card">
+                    <img src="https://img.youtube.com/vi/NRVokJbGm_s/maxresdefault.jpg" alt="Hip Replacement FAQ" class="podcast-thumb">
+                    <div class="podcast-content">
+                        <h3 class="podcast-title">Hip Replacement - Answering Questions with Dr. Rodriguez</h3>
+                        <div class="podcast-meta">
+                            <span class="play-icon"><i class="fab fa-youtube"></i></span> Watch on YouTube
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/beAD3EEdJ8I" target="_blank" class="podcast-card">
+                    <img src="https://img.youtube.com/vi/beAD3EEdJ8I/maxresdefault.jpg" alt="Bunion Correction Deep Dive" class="podcast-thumb">
+                    <div class="podcast-content">
+                        <h3 class="podcast-title">Bunion Correction Deep Dive with Dr. Danny Arora</h3>
+                        <div class="podcast-meta">
+                            <span class="play-icon"><i class="fab fa-youtube"></i></span> Watch on YouTube
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-disclaimer">
+        <p><strong>Disclaimer:</strong> The information provided on this website and in the podcast videos is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or qualified health provider with any questions you may have regarding a medical condition.</p>
+    </footer>
+
+    <script>
+        // Simple JS to duplicate review items for infinite seamless scrolling effect if needed
+        const scrollers = document.querySelectorAll(".scroller");
+
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute("data-animated", true);
+
+                const scrollerInner = scroller.querySelector(".scroller-inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                // Clone items to ensure enough width for seamless scrolling
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+    </footer>
+
+</body>
+</html>

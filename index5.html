@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathway Surgery | Orthopedic Excellence. Concierge-Guided Care.</title>
+    <meta name="description" content="Personalized orthopedic surgery coordination — from consultation to recovery. Trusted by active adults & professionals across Canada.">
+    <meta name="keywords" content="orthopedic surgery, knee surgery, hip replacement, shoulder surgery, spine surgery, Canada, Toronto, Montreal, Calgary, private healthcare">
+    <meta name="author" content="Pathway Surgery">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pathway.surgery/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pathway Surgery | Orthopedic Excellence. Concierge-Guided Care.">
+    <meta property="og:description" content="Personalized orthopedic surgery coordination — from consultation to recovery.">
+    <meta property="og:url" content="https://pathway.surgery/">
+    <meta property="og:site_name" content="Pathway Surgery">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pathway Surgery | Orthopedic Excellence">
+    <meta name="twitter:description" content="Personalized orthopedic surgery coordination — from consultation to recovery.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1e3a5f', 900: '#0f2744' },
+                        muted: { blue: '#5a7a9a' },
+                        accent: '#3b82f6'
+                    },
+                    fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+        
+        /* Gradient Text - White fading to Bright Blue */
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Smooth Testimonial Marquee */
+        .testimonial-track {
+            animation: marquee 55s linear infinite;
+            display: flex;
+            width: calc(340px * 12);
+        }
+        .testimonial-track:hover {
+            animation-play-state: paused;
+        }
+        .testimonial-slide {
+            width: 340px;
+            padding: 0 12px;
+            flex-shrink: 0;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-340px * 6)); }
+        }
+        
+        /* Carousel Animation */
+        .carousel-slide {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"MedicalOrganization","name":"Pathway Surgery","description":"Personalized orthopedic surgery coordination","url":"https://pathway.surgery","email":"admin@pathway.surgery","areaServed":["Toronto","Montreal","Calgary","Canada"],"medicalSpecialty":"Orthopedic"}
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+<!-- Header Component -->
+<div id="header-root"></div>
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center">
+    <div class="absolute inset-0 bg-navy-900">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60">
+            <source src="pathway-hero.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-900/80 to-navy-900/40"></div>
+    </div>
+    <div class="relative max-w-[1280px] mx-auto px-6 lg:px-8 py-32">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
+                Orthopedic Excellence.<br><span class="text-gradient">Concierge-Guided Care.</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 leading-relaxed">Personalized orthopedic surgery coordination — from consultation to recovery.</p>
+            
+            <div class="flex flex-col items-start gap-6">
+                <a href="#consultation" class="inline-flex bg-accent hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors">Book Your Consultation Now</a>
+                
+                <!-- 188 5-Star Reviews on Google -->
+                <a href="https://www.google.com/maps/place/Pathway+Surgery/@46.0157448,-98.4361513,4z/data=!3m1!4b1!4m6!3m5!1s0x45c2baeb615a82e5:0x9e2154544b1e3ead!8m2!3d46.0157448!4d-98.4361513!16s%2Fg%2F11vlv5rylv?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="flex items-center gap-3 opacity-90 transition-opacity hover:opacity-100 group" aria-label="188 5-star reviews on Google">
+                    <div class="flex gap-1 text-yellow-400" aria-hidden="true">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <span class="text-white font-medium text-lg tracking-wide group-hover:underline">5.0 ★ 188 Reviews</span>
+                    <svg class="w-4 h-4 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-gray-300 text-sm">
+                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Canada-wide patients</span>
+                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Virtual consultations</span>
+                <span class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Trusted by professionals</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Logos (moved from below for earlier trust signals) -->
+<section class="py-10 bg-white border-b border-gray-100">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <p class="text-center text-gray-400 text-sm mb-6 font-medium">Trusted by Professional Organizations</p>
+        <div class="flex flex-wrap justify-center items-center gap-6 lg:gap-10">
+            <img src="partner-logos/nfl.png" alt="NFL" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/MLS.png" alt="MLS" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/montreal-canadiens.png" alt="Montreal Canadiens" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/american-hockey-league.png" alt="American Hockey League" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/ohl.png" alt="OHL" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/ncaa.png" alt="NCAA" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/fifa.png" alt="FIFA" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/premier-league.png" alt="Premier League" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/U-Sports.png" alt="U Sports" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+            <img src="partner-logos/les-grands-ballets.png" alt="Les Grands Ballets" class="h-8 md:h-10 object-contain opacity-60 hover:opacity-100 transition-opacity">
+        </div>
+    </div>
+</section>
+
+<!-- Why Pathway - Value Proposition (compliance-friendly, no medical claims) -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold text-navy-900 mb-6">Why Patients Choose Pathway</h2>
+                <p class="text-lg text-gray-600 mb-8">We coordinate every aspect of your orthopedic care journey, so you can focus on what matters most — getting back to the life you love.</p>
+                <div class="space-y-5">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 mb-1">Personalized Timelines</h3>
+                            <p class="text-gray-600 text-sm">Your care is scheduled around your life, with clear communication at every step.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 mb-1">Dedicated Care Team</h3>
+                            <p class="text-gray-600 text-sm">A single point of contact who knows your case and coordinates everything from travel to recovery.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-navy-900 mb-1">Canada-Wide Access</h3>
+                            <p class="text-gray-600 text-sm">Serving patients in Toronto, Montreal, Calgary, and Vancouver with virtual consultations available nationwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden">
+                <!-- Placeholder for Why Pathway image -->
+                <div class="w-full h-full flex items-center justify-center text-gray-400">
+                    <span class="text-sm">Image placeholder</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Care Categories -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-semibold text-navy-900">Areas of Care</h2>
+                <p class="text-gray-600 mt-1">Select a specialty to learn more</p>
+            </div>
+            <a href="#" class="text-accent hover:text-blue-700 font-medium text-sm inline-flex items-center gap-1 transition-colors">
+                View all procedures
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        
+        <!-- Horizontal scroll on mobile, grid on desktop -->
+        <div class="flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 lg:mx-0 lg:px-0 lg:grid lg:grid-cols-6 lg:overflow-visible snap-x snap-mandatory scrollbar-hide" style="-ms-overflow-style: none; scrollbar-width: none;">
+            <style>.scrollbar-hide::-webkit-scrollbar { display: none; }</style>
+            
+            <a href="#" class="group flex-shrink-0 w-[160px] lg:w-auto snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 flex">
+                <div class="w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 group-hover:from-blue-500 group-hover:to-blue-700 transition-colors"></div>
+                <div class="p-5 flex-1 flex flex-col justify-between min-h-[100px]">
+                    <h3 class="font-semibold text-navy-900 text-base">Knee</h3>
+                    <span class="text-accent text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex-shrink-0 w-[160px] lg:w-auto snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 flex">
+                <div class="w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 group-hover:from-blue-500 group-hover:to-blue-700 transition-colors"></div>
+                <div class="p-5 flex-1 flex flex-col justify-between min-h-[100px]">
+                    <h3 class="font-semibold text-navy-900 text-base">Hip</h3>
+                    <span class="text-accent text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex-shrink-0 w-[160px] lg:w-auto snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 flex">
+                <div class="w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 group-hover:from-blue-500 group-hover:to-blue-700 transition-colors"></div>
+                <div class="p-5 flex-1 flex flex-col justify-between min-h-[100px]">
+                    <h3 class="font-semibold text-navy-900 text-base">Shoulder</h3>
+                    <span class="text-accent text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex-shrink-0 w-[160px] lg:w-auto snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 flex">
+                <div class="w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 group-hover:from-blue-500 group-hover:to-blue-700 transition-colors"></div>
+                <div class="p-5 flex-1 flex flex-col justify-between min-h-[100px]">
+                    <h3 class="font-semibold text-navy-900 text-base">Foot & Ankle</h3>
+                    <span class="text-accent text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex-shrink-0 w-[160px] lg:w-auto snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 flex">
+                <div class="w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 group-hover:from-blue-500 group-hover:to-blue-700 transition-colors"></div>
+                <div class="p-5 flex-1 flex flex-col justify-between min-h-[100px]">
+                    <h3 class="font-semibold text-navy-900 text-base">Hand & Wrist</h3>
+                    <span class="text-accent text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#" class="group flex-shrink-0 w-[160px] lg:w-auto snap-start bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-gray-100 hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 flex">
+                <div class="w-1.5 bg-gradient-to-b from-blue-400 to-blue-600 group-hover:from-blue-500 group-hover:to-blue-700 transition-colors"></div>
+                <div class="p-5 flex-1 flex flex-col justify-between min-h-[100px]">
+                    <h3 class="font-semibold text-navy-900 text-base">Spine</h3>
+                    <span class="text-accent text-sm font-medium inline-flex items-center gap-1 mt-3 group-hover:gap-2 transition-all">
+                        Learn more
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Surgeons Section -->
+<section id="surgeons" class="py-24 bg-white">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <!-- Left Column: Text Content -->
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-navy-900 leading-tight mb-4">Guided By Top Orthopedic Surgeons</h2>
+                    <p class="text-gray-600 leading-relaxed">Pathway Surgery partners with leading experts to deliver exceptional care through evidence-based plans that drive results.</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-navy-900 mb-1">Credible Specialists</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Decades of combined experience in orthopedics.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-navy-900 mb-1">Healthcare Reimagined</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">A personalized, tailored and timely delivery of care to our clients.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-navy-900 mb-1">Technology-Driven Care</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Utilizing innovative technologies such as robotics, navigation and biologics for more effective and patient centred care.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="surgeons.html" class="inline-block bg-navy-900 hover:bg-navy-800 text-white px-8 py-3 rounded-full font-semibold transition-colors">Meet Our Surgeons</a>
+            </div>
+            
+            <!-- Right Column: Surgeon Cards Carousel -->
+            <div x-data="{ 
+                current: 0, 
+                surgeons: [
+                    { img: 'surgeon-images/abouali.png', name: 'Dr. Jihad Abouali', badge: '' },
+                    { img: 'surgeon-images/rodriguez.png', name: 'Dr. Sebastian Rodriguez', badge: '' },
+                    { img: 'surgeon-images/arora.png', name: 'Dr. Danny Arora', badge: '' },
+                    { img: 'surgeon-images/pauyo.png', name: 'Dr. Thierry Pauyo', badge: '' },
+                    { img: 'surgeon-images/zywiel.png', name: 'Dr. Michael Zywiel', badge: '' },
+                    { img: 'surgeon-images/bashar.png', name: 'Dr. Bashar Alolabi', badge: '' },
+                    { img: 'surgeon-images/dessouki.png', name: 'Dr. Omar Dessouki', badge: '' },
+                    { img: 'surgeon-images/massicotte.png', name: 'Dr. Eric Massicotte', badge: '' }
+                ],
+                get totalPages() { return Math.ceil(this.surgeons.length / 2); }
+            }" class="relative pt-12">
+                <!-- Carousel Track Container -->
+                <div class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-out" :style="'transform: translateX(-' + (current * 100) + '%)'">
+                        <!-- Each page contains 2 surgeons -->
+                        <template x-for="page in totalPages" :key="page">
+                            <div class="grid grid-cols-2 gap-6 flex-shrink-0 w-full">
+                                <template x-for="surgeon in surgeons.slice((page - 1) * 2, (page - 1) * 2 + 2)" :key="surgeon.name">
+                                    <div class="flex flex-col">
+                                        <div class="bg-sky-100 rounded-2xl overflow-hidden aspect-[3/4]">
+                                            <img :src="surgeon.img" :alt="surgeon.name" class="w-full h-full object-cover object-top">
+                                        </div>
+                                        <div class="pt-4">
+                                            <h4 class="font-semibold text-navy-900" x-text="surgeon.name"></h4>
+                                            <!-- Fellowship/University Badge Placeholder -->
+                                            <template x-if="surgeon.badge">
+                                                <p class="text-xs text-gray-500 mt-0.5" x-text="surgeon.badge"></p>
+                                            </template>
+                                            <a href="#" class="text-navy-900 hover:text-accent text-sm font-medium inline-flex items-center mt-1">View Profile <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <!-- Carousel Navigation (horizontal, top right) -->
+                <div class="absolute top-0 right-0 flex gap-2">
+                    <button @click="current = current > 0 ? current - 1 : totalPages - 1" class="w-10 h-10 bg-white shadow-md border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button @click="current = current < totalPages - 1 ? current + 1 : 0" class="w-10 h-10 bg-white shadow-md border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- The Pathway -->
+<section class="py-24 bg-gray-50">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-semibold text-navy-900 mb-4">How We Support Your Care</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">From your first conversation to your return home, our team is here to guide you through each step with clarity and care.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Step 1: Primary Entry Point - Subtle visual emphasis -->
+            <div class="bg-white rounded-xl p-8 shadow-md text-center transition-transform duration-200 hover:scale-[1.02] ring-1 ring-blue-100">
+                <div class="w-14 h-14 bg-accent text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-6">1</div>
+                <div class="aspect-video bg-gray-100 rounded-lg mb-6 overflow-hidden"><img src="website-photos/consult.png" alt="Consultation with surgeon" class="w-full h-full object-cover"></div>
+                <h3 class="text-xl font-semibold text-navy-900 mb-2">Start with a Conversation</h3>
+                <p class="text-gray-600">Speak with a surgeon—virtually or in person—to discuss your situation, ask questions, and understand your options.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="bg-white rounded-xl p-8 shadow-sm text-center transition-transform duration-200 hover:scale-[1.01]">
+                <div class="w-12 h-12 bg-navy-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-6">2</div>
+                <div class="aspect-video bg-gray-100 rounded-lg mb-6 overflow-hidden"><img src="website-photos/patient-care-team.png" alt="Care team coordination" class="w-full h-full object-cover"></div>
+                <h3 class="text-xl font-semibold text-navy-900 mb-2">We Coordinate the Details</h3>
+                <p class="text-gray-600">Our care team manages scheduling, pre-operative preparation, and any travel or accommodation needs—so you can focus on what matters.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-white rounded-xl p-8 shadow-sm text-center transition-transform duration-200 hover:scale-[1.01]">
+                <div class="w-12 h-12 bg-navy-900 text-white rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-6">3</div>
+                <div class="aspect-video bg-gray-100 rounded-lg mb-6 overflow-hidden"><img src="website-photos/physio.png" alt="Recovery and physiotherapy" class="w-full h-full object-cover"></div>
+                <h3 class="text-xl font-semibold text-navy-900 mb-2">Recover with Guidance</h3>
+                <p class="text-gray-600">Receive personalized rehabilitation plans, follow-up check-ins, and ongoing access to your care team throughout your recovery.</p>
+            </div>
+        </div>
+        <!-- Low-pressure CTA -->
+        <div class="text-center mt-14">
+            <p class="text-gray-500 mb-4">Have questions about what to expect?</p>
+            <a href="#consultation" class="inline-flex items-center text-accent hover:text-blue-700 font-semibold transition-colors">
+                Schedule a consultation to learn more
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Auto-Scrolling Testimonials -->
+<section class="py-24 bg-white overflow-hidden">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-semibold text-navy-900 mb-4">What Our Patients Say</h2>
+        </div>
+    </div>
+    <div class="relative">
+        <div class="testimonial-track">
+            <!-- 6 testimonials duplicated for seamless loop -->
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"The entire experience was seamless. Exceptional care from start to finish."</p><span class="font-medium text-navy-900 text-sm">— Sarah M.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"Professional and efficient. They handled everything so I could focus on recovery."</p><span class="font-medium text-navy-900 text-sm">— Michael R.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"Pathway made my knee surgery stress-free. Highly recommend to anyone."</p><span class="font-medium text-navy-900 text-sm">— Jennifer L.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"Outstanding service from consultation to recovery. Truly world-class care."</p><span class="font-medium text-navy-900 text-sm">— David K.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"The team coordinated everything perfectly. Best decision I ever made."</p><span class="font-medium text-navy-900 text-sm">— Patricia W.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"From out of province and they handled all logistics flawlessly. Amazing!"</p><span class="font-medium text-navy-900 text-sm">— Robert T.</span></div></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"The entire experience was seamless. Exceptional care from start to finish."</p><span class="font-medium text-navy-900 text-sm">— Sarah M.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"Professional and efficient. They handled everything so I could focus on recovery."</p><span class="font-medium text-navy-900 text-sm">— Michael R.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"Pathway made my knee surgery stress-free. Highly recommend to anyone."</p><span class="font-medium text-navy-900 text-sm">— Jennifer L.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"Outstanding service from consultation to recovery. Truly world-class care."</p><span class="font-medium text-navy-900 text-sm">— David K.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"The team coordinated everything perfectly. Best decision I ever made."</p><span class="font-medium text-navy-900 text-sm">— Patricia W.</span></div></div>
+            <div class="testimonial-slide"><div class="bg-gray-50 rounded-xl p-6 h-full border border-gray-100"><p class="text-gray-700 text-sm mb-4 italic">"From out of province and they handled all logistics flawlessly. Amazing!"</p><span class="font-medium text-navy-900 text-sm">— Robert T.</span></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Podcasts Carousel -->
+<section id="resources" class="py-24 bg-white">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-semibold text-navy-900 mb-12 text-center">Surgeon Podcasts</h2>
+        <div x-data="{ current: 0, total: 5 }" class="relative">
+            <div class="overflow-hidden">
+                <div class="flex transition-transform duration-300" :style="'transform: translateX(-' + (current * 33.33) + '%)'">
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"><a href="https://youtu.be/NRVokJbGm_s" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden"><img src="https://img.youtube.com/vi/NRVokJbGm_s/maxresdefault.jpg" alt="Knee Replacement FAQ" class="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300"></a><div class="mt-3"><p class="font-semibold text-navy-900 text-sm">Understanding Knee Replacement</p><p class="text-xs text-gray-500 mt-1">with Dr. Rodriguez Elizalde</p></div></div>
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"><a href="https://youtu.be/beAD3EEdJ8I" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden"><img src="https://img.youtube.com/vi/beAD3EEdJ8I/maxresdefault.jpg" alt="Hip Replacement FAQ" class="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300"></a><div class="mt-3"><p class="font-semibold text-navy-900 text-sm">Understanding Hip Replacement</p><p class="text-xs text-gray-500 mt-1">with Dr. Rodriguez Elizalde</p></div></div>
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"><a href="https://youtu.be/OiP2dZaIcaA" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden"><img src="https://img.youtube.com/vi/OiP2dZaIcaA/maxresdefault.jpg" alt="All Things Hip" class="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300"></a><div class="mt-3"><p class="font-semibold text-navy-900 text-sm">All Things Hip Surgery</p><p class="text-xs text-gray-500 mt-1">with Dr. Rodriguez & Dr. Pauyo</p></div></div>
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"><a href="https://youtu.be/8K0ysDhz4J4" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden"><img src="https://img.youtube.com/vi/8K0ysDhz4J4/maxresdefault.jpg" alt="ACL Reconstruction" class="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300"></a><div class="mt-3"><p class="font-semibold text-navy-900 text-sm">ACL & Meniscal Repair</p><p class="text-xs text-gray-500 mt-1">with Dr. Abouali</p></div></div>
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"><a href="https://youtu.be/A4PNlO1uAAc" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden"><img src="https://img.youtube.com/vi/A4PNlO1uAAc/maxresdefault.jpg" alt="Bunion Correction" class="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300"></a><div class="mt-3"><p class="font-semibold text-navy-900 text-sm">Bunion Correction Deep Dive</p><p class="text-xs text-gray-500 mt-1">with Dr. Danny Arora</p></div></div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-8 space-x-2">
+                <template x-for="i in 3" :key="i"><button @click="current = i - 1" :class="current === i - 1 ? 'bg-navy-900' : 'bg-gray-300'" class="w-3 h-3 rounded-full transition-colors"></button></template>
+            </div>
+            <button @click="current = current > 0 ? current - 1 : 2" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+            <button @click="current = current < 2 ? current + 1 : 0" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <div class="text-center mt-10"><a href="#" class="inline-flex items-center text-accent hover:text-blue-700 font-semibold transition-colors">Watch All Episodes →</a></div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-24 bg-gray-50">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-semibold text-navy-900 mb-12 text-center">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto space-y-4" x-data="{ open: null }">
+            <div class="bg-white rounded-xl shadow-sm">
+                <button @click="open = open === 1 ? null : 1" class="w-full px-6 py-5 text-left flex justify-between items-center">
+                    <span class="font-semibold text-navy-900">How long does the consultation process take?</span>
+                    <svg :class="open === 1 ? 'rotate-180' : ''" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="open === 1" x-cloak class="px-6 pb-5 text-gray-600">Placeholder answer - to be updated with real content.</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm">
+                <button @click="open = open === 2 ? null : 2" class="w-full px-6 py-5 text-left flex justify-between items-center">
+                    <span class="font-semibold text-navy-900">What types of surgeries do you coordinate?</span>
+                    <svg :class="open === 2 ? 'rotate-180' : ''" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="open === 2" x-cloak class="px-6 pb-5 text-gray-600">Placeholder answer - to be updated with real content.</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm">
+                <button @click="open = open === 3 ? null : 3" class="w-full px-6 py-5 text-left flex justify-between items-center">
+                    <span class="font-semibold text-navy-900">Do you accept patients from outside Ontario?</span>
+                    <svg :class="open === 3 ? 'rotate-180' : ''" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="open === 3" x-cloak class="px-6 pb-5 text-gray-600">Placeholder answer - to be updated with real content.</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm">
+                <button @click="open = open === 4 ? null : 4" class="w-full px-6 py-5 text-left flex justify-between items-center">
+                    <span class="font-semibold text-navy-900">What is the typical recovery time?</span>
+                    <svg :class="open === 4 ? 'rotate-180' : ''" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="open === 4" x-cloak class="px-6 pb-5 text-gray-600">Placeholder answer - to be updated with real content.</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm">
+                <button @click="open = open === 5 ? null : 5" class="w-full px-6 py-5 text-left flex justify-between items-center">
+                    <span class="font-semibold text-navy-900">How do I get started?</span>
+                    <svg :class="open === 5 ? 'rotate-180' : ''" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="open === 5" x-cloak class="px-6 pb-5 text-gray-600">Placeholder answer - to be updated with real content.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation CTA -->
+<section id="consultation" class="py-24 bg-navy-900">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">We're Here to Help — Let's Get Started</h2>
+                <div class="aspect-[4/3] bg-gray-700 rounded-xl mb-6"></div>
+                <p class="text-gray-300">Our team is ready to guide you through every step of your orthopedic care journey.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 lg:p-10">
+                <form class="space-y-5">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div><label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label><input type="text" id="firstName" name="firstName" required aria-label="First Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-colors"></div>
+                        <div><label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label><input type="text" id="lastName" name="lastName" required aria-label="Last Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-colors"></div>
+                    </div>
+                    <div><label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label><input type="email" id="email" name="email" required aria-label="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-colors"></div>
+                    <div><label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label><input type="tel" id="phone" name="phone" aria-label="Phone Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-colors"></div>
+                    <div><label for="procedure" class="block text-sm font-medium text-gray-700 mb-1">Procedure Type</label><select id="procedure" name="procedure" required aria-label="Procedure Type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-colors bg-white"><option value="">Select a procedure</option><option value="knee">Knee</option><option value="hip">Hip</option><option value="shoulder">Shoulder & Elbow</option><option value="foot">Foot & Ankle</option><option value="hand">Hand & Wrist</option><option value="spine">Spine</option><option value="other">Other</option></select></div>
+                    <div><label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label><textarea id="message" name="message" rows="4" aria-label="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-colors resize-none"></textarea></div>
+                    <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors">Request My Consultation</button>
+                    <p class="text-sm text-gray-500 text-center">Takes ~60 seconds • We'll respond within 24 hours</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Component -->
+<div id="footer-root"></div>
+
+<!-- Component Scripts -->
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/fab.js"></script>
+
+</body>
+</html>
